@@ -1,0 +1,35 @@
+<?xml version="1.0" standalone="yes"?>
+<Collection>
+  <Fields field="title">
+    <name>标题</name>
+    <type>nvchar</type>
+    <maxlength>200</maxlength>
+    <c_rules>&lt;title&gt;(?&lt;content&gt;.+)&lt;/title&gt;</c_rules>
+    <n_rules />
+    <replace_rules>-pageadmin网站管理系统</replace_rules>
+  </Fields>
+  <Fields field="pa_source">
+    <name>来源</name>
+    <type>nvchar</type>
+    <maxlength>200</maxlength>
+    <c_rules />
+    <n_rules />
+    <replace_rules />
+  </Fields>
+  <Fields field="thedate">
+    <name>发布日期</name>
+    <type>datetime</type>
+    <maxlength>200</maxlength>
+    <c_rules>发布时间：(?&lt;content&gt;.+)&lt;/span&gt;&lt;A(\s*?)&amp;nbsp;&amp;nbsp;浏览量：</c_rules>
+    <n_rules />
+    <replace_rules />
+  </Fields>
+  <Fields field="pa_content">
+    <name>详细内容</name>
+    <type>text</type>
+    <maxlength>0</maxlength>
+    <c_rules>&lt;div id="Infor_Content"&gt;(?&lt;content&gt;.+)&lt;/div&gt;(\s*?)&lt;script type="text/javascript" src="/js/internal_page.js"&gt;&lt;/script&gt;</c_rules>
+    <n_rules />
+    <replace_rules />
+  </Fields>
+</Collection>

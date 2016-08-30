@@ -1,0 +1,43 @@
+﻿<?xml version="1.0"?>
+<Collection>
+
+<Fields field="title">
+<name>标题</name>
+<type>nvchar</type>
+<maxlength>200</maxlength>
+<c_rules />
+<n_rules />
+<replace_rules />
+</Fields>
+
+
+<Fields field="pa_source">
+<name>来源</name>
+<type>nvchar</type>
+<maxlength>200</maxlength>
+<c_rules />
+<n_rules />
+<replace_rules />
+</Fields>
+
+
+<Fields field="thedate">
+<name>发布日期</name>
+<type>datetime</type>
+<maxlength>200</maxlength>
+<c_rules />
+<n_rules />
+<replace_rules />
+</Fields>
+
+
+<Fields field="pa_content">
+<name>详细内容</name>
+<type>text</type>
+<maxlength>0</maxlength>
+<c_rules />
+<n_rules />
+<replace_rules />
+</Fields>
+
+</Collection>

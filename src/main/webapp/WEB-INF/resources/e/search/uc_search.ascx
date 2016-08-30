@@ -1,0 +1,1 @@
+﻿<% @ Control language="c#" Inherits="PageAdmin.uc_search"%>

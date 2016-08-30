@@ -1,0 +1,29 @@
+﻿body,div,ul,li,table,p,h1,form,legend,fieldset,input button,select,textarea,button{margin:0px;padding:0px;font-family:inherit;font-size:inherit;}
+ul,li{list-style:none;}
+table{border-collapse:collapse;border-spacing:0;}
+a{color:#333333;text-decoration:none;}
+a:hover{color:#FF9900;text-decoration:underline;}
+body{word-wrap:break-word;text-align:center;font:12px/1.6em Tahoma,Helvetica,Arial,sans-serif;color:#333333;}
+img{cursor:pointer}
+.ts{background:url(/e/images/public/li_icon.png) no-repeat 0 -128px;height:22px;display:block;padding-left:15px}
+
+.orderbody{background:url(images/body_bg.png) repeat-x 0 0;}
+.order{width:98%;text-align:center;}
+.order .header td{background-color:#0075C4;color:#ffffff;height:25px;font-weight:bold;border:1px solid #ffffff;border-width:0px 1px 0px 0px}
+.order .item td{border:1px dotted #cccccc;border-width:0 0 1px 0;padding:5px 0 5px 0}
+.send_header{background-color:#0075C4;color:#ffffff;height:20px;font-weight:bold}
+.order .pdpic{width:150px;display:none}
+
+.orderinfor_table{width:98%;border:1px solid #dddddd;}
+.orderinfor_table td{border:1px solid #dddddd;}
+
+.exchangebody{background:url(images/body_bg.png) repeat-x 0 0;}
+.exchange{width:90%;text-align:center;margin:0 auto 0 auto;height:250px;padding:20px 0 0 0}
+.exchange .infor li{padding:5px 0 5px 0}
+.exchange .bt{background:url(/e/images/public/bt.png) no-repeat -43px -44px;width:85px;height:21px;border-width:0px;color:#ffffff}
+
+.bt{border:1px solid #ccc;padding:0px 10px;height:22px;line-height:22px;cursor:pointer;margin:1px 0px;font-size:12px;background-color:#fff;color:#333}
+.bt:hover{border-color:#FF9900;background-color:#FF9900;color:#fff}
+@-moz-document url-prefix(){.bt{line-height:20px;}}
+
+

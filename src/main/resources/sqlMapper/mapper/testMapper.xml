@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.springapp.mvc.dao.TestDao">
+    <resultMap id="JdScfCustomerChange" type="com.springapp.mvc.domain.TestDomain">
+        <result property="id" column="id"/>
+        <result property="custNo" column="cust_no"/>
+        <result property="jdCustNo" column="jd_cust_no"/>
+        <result property="isFrozed" column="is_frozed"/>
+        <result property="isInit" column="is_init"/>
+        <result property="isDone" column="is_done"/>
+        <result property="remark" column="remark"/>
+        <result property="operator" column="operator"/>
+        <result property="signedContractTime" column="signed_contract_time"/>
+        <result property="createTime" column="create_time"/>
+        <result property="updateTime" column="update_time"/>
+        <result property="yn" column="yn"/>
+    </resultMap>
+
+    <!-- 用于select查询公用抽取的列 -->
+    <sql id="columns">
+        <![CDATA[
+        id ,cust_no ,jd_cust_no ,is_frozed ,is_init ,is_done ,remark ,operator ,signed_contract_time,create_time ,update_time ,yn
+        ]]>
+    </sql>
+
+    <!-- 保存数据 -->
+    <insert id="saveJdScfCustomerChange" >
+        INSERT INTO jd_scf_customer_change (
+        id,
+        cust_no,
+        jd_cust_no,
+        is_frozed,
+        is_init,
+        is_done,
+        remark,
+        operator,
+        signed_contract_time,
+        create_time,
+        update_time,
+        yn
+        ) VALUES (
+        #{id, jdbcType=BIGINT} ,
+        #{custNo, jdbcType=VARCHAR} ,
+        #{jdCustNo, jdbcType=VARCHAR} ,
+        #{isFrozed, jdbcType=INTEGER} ,
+        #{isInit, jdbcType=INTEGER} ,
+        #{isDone, jdbcType=INTEGER} ,
+        #{remark, jdbcType=VARCHAR} ,
+        #{operator, jdbcType=VARCHAR} ,
+        #{signedContractTime, jdbcType=TIMESTAMP} ,
+        #{createTime, jdbcType=TIMESTAMP} ,
+        #{updateTime, jdbcType=TIMESTAMP} ,
+        #{yn, jdbcType=INTEGER}
+        )
+    </insert>
+
+
+    <!-- 根据id查找此条记录 -->
+    <select id="queryById" resultMap="JdScfCustomerChange">
+        SELECT <include refid="columns"/>
+        <![CDATA[
+        FROM jd_scf_customer_change
+        WHERE
+        id = #{id}
+        ]]>
+    </select>
+
+</mapper>
+

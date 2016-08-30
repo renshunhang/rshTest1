@@ -1,0 +1,42 @@
+﻿/*下拉样式*/
+#Menu ul li{position:relative;z-index:10;}
+#Menu ul li ul{position:absolute;top:96px;left:0;z-index:10;background-color:#000;width:160px;display:none;}/*一级样式*/
+#Menu ul li ul li{position:relative;width:160px;height:35px;line-height:35px;text-align:center;margin:0px;padding:0px 0 0 0px;}/*li行样式*/
+#Menu ul li ul li ul{position:absolute;left:150px;top:0px;display:none;}/*二级样式*/
+#Menu ul li ul li ul li ul{position:absolute;top:0px;display:none;}/*三级样式*/
+
+
+#Menu ul li:hover{} /*鼠标经过时栏目li样式*/
+#Menu ul li:hover a.menu{}
+#Menu ul li:hover ul{display:block} 
+#Menu ul li:hover ul li ul{display:none;} 
+#Menu ul li ul li:hover ul{display:block;}
+#Menu ul li ul li:hover{}/*鼠标经过时下拉li样式*/
+#Menu ul li ul li:hover ul li ul{display:none} 
+#Menu ul li ul li ul li:hover ul{display:block;} 
+
+
+#Menu ul li ul a{display:block!important;display:inline;line-height:35px;text-align:left;padding-left:45px;margin:0px;overflow:hidden;color:#fff;}/*默认a样式*/
+#Menu ul li ul a:hover{text-decoration:none;background:#2773be;color:#fff}/*鼠标经过a样式*/
+@media only screen and (max-width:1000px) 
+{
+#Menu ul li{position:relative;width:100%;}
+#Menu ul li ul{position:static;left:0;z-index:10;width:100%;display:block;background:#000;}/*一级样式*/
+#Menu ul li ul li{position:relative;width:100%;height:auto;line-height:30px;text-align:center;}/*li行样式*/
+#Menu ul li ul li ul{position:static;display:block;}/*二级样式*/
+#Menu ul li ul li ul li ul{position:static;display:block;}/*三级样式*/
+
+#Menu ul li:hover/*鼠标经过时栏目li样式*/
+#Menu ul li:hover a.menu{}
+#Menu ul li:hover ul{display:block} 
+#Menu ul li:hover ul li ul{display:block;} 
+#Menu ul li ul li:hover ul{display:block;}
+#Menu ul li ul li:hover{}/*鼠标经过时下拉li样式*/
+#Menu ul li ul li:hover ul li ul{display:block} 
+#Menu ul li ul li ul li:hover ul{display:block;}
+#Menu ul li ul a{padding-left:35px;margin:0px;color:white;}
+#Menu ul li ul a:hover{color:white;background:#2773BE;}
+#Menu ul li ul li ul a{padding-left:40px;}
+#Menu ul li ul li ul li ul a{padding-left:55px;}
+#Menu ul li ul li ul li ul li ul a{padding-left:70px;}
+}

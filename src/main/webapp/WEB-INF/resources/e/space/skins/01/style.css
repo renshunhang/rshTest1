@@ -1,0 +1,92 @@
+﻿/*网站基础样式*/
+body,div,ul,li,table,p,h1,form,legend,fieldset,input button,select,textarea,button{margin:0px;padding:0px;font-family:inherit;font-size:inherit;}
+ul,li{list-style:none;}
+table{border-collapse:collapse;border-spacing:0;}
+a{color:#333333;text-decoration:none;}
+a:hover{text-decoration:underline;}
+a.login:link{font-size:9pt;color:#FF0000;text-decoration:underline}
+a.login:visited{font-size:9pt;color:#FF0000;;text-decoration:underline}
+a.login:hover{font-size:9pt;color:#FF0000;text-decoration:underline}
+
+
+body{word-wrap:break-word;text-align:center;font:12px/1.6em Verdana,Helvetica,Arial,sans-serif;color:#333333;}
+.page_style{width:900px;margin:0px auto 0px auto;text-align:center;background-color:#ffffff;overflow:hidden;}
+.left{float:left}
+.right{float:right}
+.clear{clear:both;font-size:0px;height:0px;line-height:0px;width:0px;margin:0 0 0 0;padding:0 0 0 0;overflow:hidden}
+
+/*顶部样式*/
+.top_box{text-align:right;padding-right:5px}
+.banner_box{text-align:left;padding-left:20px;height:110px}
+.banner_box .title{display:block;padding-top:20px;color:#ffffff;font-size:15px;font-weight:bold;}
+.banner_box .introduction{color:#ffffff}
+/*菜单样式*/
+
+.menu_box{clear:both;border:0 solid #cccccc;}
+.menu_box_top{text-align:left}
+.menu_box_lanmu{clear:both;text-align:left;height:33px;background:url(images/menu_bg.gif) repeat 0 0;padding-left:10px;overflow:hidden}
+
+.menu_style_first{float:left;text-align:center;padding:6px 10px 0 10px;}
+.menu_style{float:left;text-align:center;padding:6px 5px 0 10px;}
+
+a.menu:link{color:#fff;text-decoration: none;font-weight:normal;}
+a.menu:visited {color:#fff;text-decoration:none;font-weight:normal;}
+a.menu:hover {color:#fff;text-decoration:underline;font-weight:normal;}
+
+
+/*布局样式*/
+
+.lanmu_box{clear:both;margin:5px 0 0 0;height:100%;overflow:hidden;}
+.lanmu_box_left{float:left;width:650px;margin:0 10px 0 0;overflow:hidden;text-align:left;}
+.lanmu_box_right{float:right;width:240px;margin:0 0 0 0;padding:0 0 0 0;overflow:hidden;text-align:left;padding-top:25px}
+.lanmu_site{text-align:left;height:25px;}
+
+/*右侧样式*/
+
+.nav_box{clear:both;margin:0 0 10px 0;overflow:hidden;border:1px solid #AEE0FF}
+.nav_sign{display:block;text-align:left;padding:5px 0 0 10px;color:#02A0FF}
+.nav_title{font-weight:bold;border:0 solid #cccccc;border-width:0 0 0 0;height:25px;text-align:left;color:#fff;background:url(images/nav_titlt_bg.gif) repeat 0 0;overflow:hidden;}
+.nav_header{text-align:left;padding:0 0 0 0;margin:0 0 0 0}
+.nav_content{margin:0 0 0 0;padding:5px 5px 5px 10px;border:0px solid #cccccc;text-align:left;}
+.headimage{width:150px;border:1px solid #eeeeee}
+
+/*左侧样式*/
+
+.module_box{clear:both;margin:0 0 8px 0;border:1px solid #AEE0FF;overflow:hidden;}
+.module_title{margin:0 0 0 0;height:25px;text-align:left;border:0 solid #cccccc;background:url(images/nav_titlt_bg.gif) repeat 0 0;}
+.module_sign{float:left;text-align:left;padding:5px 0 0 10px;font-weight:bold;color:#02A0FF}
+.module_more{float:right;font-weight:normal;padding:5px 10px 0 10px;margin:0 0 0 0;background:url(public/more_icon.gif) no-repeat 0 13px;}
+.module_more a{font-size:10px;line-height:15px}
+.module_header{text-align:left;padding:0 0 0 0;margin:0 0 0 0}
+
+.module_content{margin:0 0 0 0;padding:10px 10px 10px 10px;text-align:left;border:0 solid #cccccc;}
+
+.page{clear:both;text-align:center;padding:1px 5px 0px 5px;background-color:#ffffff;margin:15px 0 10px 0;font-family:宋体;}
+.page a{vertical-align:middle;zoom:1;height:15px;line-height:15px;padding:2px 8px 3px 8px;border:1px solid #cccccc;}
+.page span{vertical-align:middle;zoom:1;height:15px;line-height:15px;padding:2px 8px 3px 8px;border:1px solid #cccccc;}
+.page span.c{padding:2px 2px 3px 2px;font-weight:bold;border:0px solid #cccccc;}
+
+/*列表样式*/
+.list{}
+.list li{clear:both;text-align:left;padding:5px 5px 0 15px;background:url(images/article_arrow.gif)  no-repeat 5px 13px;overflow:hidden;}
+.list .title{float:left;text-align:left;}
+.list .date{float:right;color:#666666}
+.list .clicks{color:#999999}
+
+/*留言本样式*/
+.fbklist{clear:both}
+.fbklist .finfo{color:#666666}
+.fbklist .rinfo{color:#666666;text-align:right;margin-top:5px;}
+.fbklist .fbk{padding:0 5px 5px 10px;}
+.fbklist .reply{padding:5px 5px 5px 10px;border:1px dotted #cccccc;background-color:#F3F3F3;}
+.fbklist .sp{line-height:2px;height:2px;border:1px solid #cccccc;border-width:0 0 1px 0;margin:5px 0 10px 0}
+
+
+/*bottom样式*/
+.bottom_box{clear:both;padding:5px 0 5px 0;border:0 solid #AEE0FF;border-width:2px 0 0 0;margin-top:5px;text-align:center;width:100%}
+
+
+/*其他样式*/
+.textarea{border:1px solid #cccccc;border-color:#000000 #cccccc #cccccc #000000;}
+.bt{width:70px;font-size:9pt;height:22px;cursor:pointer;background-image:url(images/bt.gif);border-width:0px}
+.tb{border:1px solid #cccccc;border-color:#000000 #cccccc #cccccc #000000;}
