@@ -32,6 +32,7 @@ public class viewController {
         OpbackResult result = new OpbackResult();
         result.setMessage("success");
         return "result";
+
     }
 
     @RequestMapping("queryResult")
