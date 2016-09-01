@@ -5,11 +5,22 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
 
 
-       <!--<mvc:resources location="/WEB-INF/resources/" mapping="/resources/**" cache-period="864000"/>-->
+       <!--配置一个代理-->
+       <bean id="greetProxy" class="org.springframework.aop.framework.ProxyFactoryBean">
+              <!--需要代理的接口-->
+              <property name="interfaces" value="com.springapp.mvc.service.AOPtest.Greeting"/>
+              <!--接口实现类-->
+              <property name="target" ref="greetingImpl"/>
+              <!--拦截器名称（增强类的名称）-->
+              <property name="interceptorNames">
+                     <!--list还可以放其他的，比如前置增强，后置增强和环绕增强-->
+                     <list>
+                            <value>greetingAroundAdvice</value>
+                     </list>
+              </property>
+       </bean>
 
-       <!--<context:component-scan base-package="com.springapp.mvc" use-default-filters="false">-->
-              <!--<context:include-filter type="annotation" expression="org.springframework.stereotype.Service"/>-->
-       <!--</context:component-scan>-->
-       <!--<bean id="testService" class="com.springapp.mvc.service.impl.TestServiceImpl"/>-->
 
+       <bean id="greetingImpl" class="com.springapp.mvc.service.AOPtest.GreetingImpl"/>
+       <bean id="greetingAroundAdvice" class="com.springapp.mvc.service.AOPtest.GreetingAroundAdvice"/>
 </beans>
