@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:batch="http://www.springframework.org/schema/batch"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/batch http://www.springframework.org/schema/batch/spring-batch.xsd">
+
+
+       <!-- spring batch -jobRepository -->
+       <bean id="jobRepository" class="org.springframework.batch.core.repository.support.MapJobRepositoryFactoryBean" />
+
+       <!-- spring - transactionManager -->
+       <bean id="transactionManager" class="org.springframework.batch.support.transaction.ResourcelessTransactionManager" />
+
+       <!-- batch launcher -->
+       <bean id="jobLauncher" class="org.springframework.batch.core.launch.support.SimpleJobLauncher">
+              <property name="jobRepository" ref="jobRepository" />
+       </bean>
+
+
+       <bean id="messageReader" class="org.springframework.batch.item.file.FlatFileItemReader">
+              <property name="lineMapper" ref="lineMapper"/>
+              <property name="resource" value="file:E:\rsh_test\rshTest\src\main\webapp\WEB-INF\resources\test\test.txt"/>
+       </bean>
+
+       <bean id="lineMapper" class="org.springframework.batch.item.file.mapping.DefaultLineMapper">
+              <property name="lineTokenizer" ref="lineTokenizer"/>
+              <property name="fieldSetMapper" ref="fieldSetMapper"/>
+       </bean>
+       <bean id="fieldSetMapper" class="com.springapp.mvc.service.UserMapper"/>
+       <bean id="lineTokenizer" class="org.springframework.batch.item.file.transform.DelimitedLineTokenizer"/>
+       <bean id="messageProcessor" class="com.springapp.mvc.service.BatchTest.MessageProcessor"/>
+       <bean id="messageWriter" class="com.springapp.mvc.service.BatchTest.MessageWriter"/>
+       <bean id="hello" class="com.springapp.mvc.service.BatchTest.HelloTest">
+              <!--<property name="name" value="renshunhang"/>-->
+       </bean>
+       <bean id="world" class="com.springapp.mvc.service.BatchTest.WorldTest"/>
+
+
+       <batch:job id="messageJob">
+              <batch:step id="step" next="step2">
+                     <batch:tasklet ref="hello" transaction-manager="transactionManager"></batch:tasklet>
+              </batch:step>
+              <batch:step id="step2" next="messageStep">
+                     <batch:tasklet ref="world" transaction-manager="transactionManager"></batch:tasklet>
+              </batch:step>
+
+              <batch:step id="messageStep">
+                     <batch:tasklet>
+                            <batch:chunk reader="messageReader" processor="messageProcessor" writer="messageWriter"
+                                         commit-interval="30"></batch:chunk>
+                     </batch:tasklet>
+              </batch:step>
+       </batch:job>
+
+</beans>
