@@ -13,6 +13,8 @@
 <div id="sssss">
   <input id="id" name="id" value="${id}">
   <button onclick="queryInfo();">查询</button>
+
+    <button onclick="toAsync();">异步调用</button>
     <span id = "msg"></span>
 </div>
 <div id="res" >
@@ -35,14 +37,17 @@
           data:{"id":id},
           dataType:"json",
           success:function(result){
-              document.getElementById("ress").value="即将隐藏...";
-              alert(result.message);
-              document.getElementById("ress").style.display="none";
+              document.getElementById("ress").value=result.message;
+//              document.getElementById("ress").style.display="none";
           },
           error:function(){
               alert("error");
           }
       });
+  }
+
+  function toAsync(){
+     window.location.href = "/view/async";
   }
  /*var xmlHttp;
   function createXMLHttp(){

@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Language>
+  <Item name="中文" value="zh-cn" /> 
+  <Item name="英文" value="en" />
+  <Item name="法语" value="fr" />
+  <Item name="德语" value="de" />
+  <Item name="俄语" value="ru" />
+  <Item name="日语" value="ja" />
+  <Item name="韩语" value="ko" />
+  <Item name="西班牙语" value="es" />
+  <Item name="希腊语" value="el" />
+  <Item name="波斯语" value="fa" /> 
+  <Item name="阿拉伯语" value="ar" />   
+  <Item name="手机版" value="wap" />  
+</Language>

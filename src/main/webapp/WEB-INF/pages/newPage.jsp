@@ -159,15 +159,15 @@
 
                                         <li class="bigpic"><a href="/view/query"><img src="/resources/e/upload/s1/article/image/2016/07/323456.jpg"></a></li>
 
-                                        <li class="bigpic"><a href="/index.aspx?lanmuid=84&sublanmuid=708&id=501"><img src="/resources/e/upload/s1/article/image/2016/07/623456.jpg"></a></li>
+                                        <li class="bigpic"><img src="/resources/e/upload/s1/article/image/2016/07/623456.jpg"></li>
 
-                                        <li class="bigpic"><a href="/index.aspx?lanmuid=84&sublanmuid=708&id=500"><img src="/resources/e/upload/s1/article/image/2016/07/323456.jpg"></a></li>
+                                        <li class="bigpic"><img src="/resources/e/upload/s1/article/image/2016/07/323456.jpg"></li>
 
-                                        <li class="bigpic"><a href="/index.aspx?lanmuid=84&sublanmuid=708&id=499"><img src="/resources/e/upload/s1/article/image/2016/07/423456.jpg"></a></li>
+                                        <li class="bigpic"><img src="/resources/e/upload/s1/article/image/2016/07/423456.jpg"></li>
 
                                     </ul>
                                 </div>
-                                <div class="mk_more"><a href="/index.aspx?lanmuid=84&sublanmuid=708">更多案例</a></div>
+                                <div class="mk_more"><a href="">更多案例</a></div>
                             </div>
                         </div>
 
@@ -175,67 +175,6 @@
                     <div class="module_footer"><span class="l"></span><span class="r"></span></div>
                 </div>
             </div>
-
-
-
-            <div id="module_199" class="module_box fadeleft">
-                <div class="module_box_inner">
-                    <div class="module_title"><span class="module_sign"><span class="title1">新闻资讯</span><div class="title2"><span class="ywwz">NEWS</span></div></span><span class="module_more"></span></div>
-                    <div id="module_content_199" class="module_content module_content_introduct">
-
-                        <div class="sy_xwdt_box">
-                            <div class="xwdt_left"><ul class="mk_twjj_box">
-
-                                <li>
-                                    <a class="pic" href="/index.aspx?lanmuid=63&sublanmuid=547&id=509"><img src="/resources/e/upload/s1/article/image/2016/07/18145454.jpg"/></a>
-                                    <span class="title"><a href="/index.aspx?lanmuid=63&sublanmuid=547&id=509">首届台球公开赛开始啦</a></span>
-                                    <div class="jj">7月15日，万众瞩目的第一届台球公开赛正式开始啦！经综合部、裁判组现场抽签，所有参赛选手分组完成，对阵名单也随即揭晓。本次台球公开赛将进行初赛、复赛、决赛三轮比...</div>
-                                </li>
-
-                                <ul></div>
-                            <div class="xwdt_right"><ul class="mk_wzlbzbrq_box">
-
-                                <li>
-                                    <span class="date"><em>18</em>2016-07</span>
-                                    <div class="con">
-                                        <span class="title"><a href="/index.aspx?lanmuid=63&sublanmuid=547&id=509">首届台球公开赛开始啦</a></span>
-                                        <div class="jj">7月15日，万众瞩目的第一届台球公开赛正式开始啦！经综合部、裁判组现场抽签，所有参赛选手分组完成，对阵名单也随即揭晓。本次台球公开赛将进行初赛、复赛、决赛三轮比...</div>
-                                    </div>
-                                </li>
-
-                                <li>
-                                    <span class="date"><em>18</em>2016-07</span>
-                                    <div class="con">
-                                        <span class="title"><a href="/index.aspx?lanmuid=63&sublanmuid=547&id=512">招聘英雄帖，全城紧急寻人启事中！</a></span>
-                                        <div class="jj">招聘英雄帖，全城紧急寻人启事中！ 我们要找的人是你么？​做事踏实认真不浮夸，工作时刻小宇宙爆棚！ AE：​1 广告行业AE经验​2 熟悉地产以及各大品牌​3 三年以上工作经...</div>
-                                    </div>
-                                </li>
-
-                                <li>
-                                    <span class="date"><em>18</em>2016-07</span>
-                                    <div class="con">
-                                        <span class="title"><a href="/index.aspx?lanmuid=63&sublanmuid=547&id=511">2015.06.18 观策台活动</a></span>
-                                        <div class="jj">第二季第六期观策台活动圆满结束了， 没来现场的小伙伴们，下次可不要错过这么好的活动了哦~ 呐，观策台呢，是由我组织的悟咖啡承办的一场重庆本土策划人聚会。在观策...</div>
-                                    </div>
-                                </li>
-
-                                <li>
-                                    <span class="date"><em>18</em>2016-07</span>
-                                    <div class="con">
-                                        <span class="title"><a href="/index.aspx?lanmuid=63&sublanmuid=547&id=510">2015.07.02 观策台简报</a></span>
-                                        <div class="jj">七月二日，第二季第7期观策台活动如期而至。 傍晚六点半，初夏的重庆显然还没有暗下来，本次活动举办地点“鎏嘉码头悟咖啡”在风雨中显得格外宁静。 本场活动的分享嘉宾...</div>
-                                    </div>
-                                </li>
-
-                            </ul></div>
-                        </div>
-                        <div class="mk_more"><a href="/index.aspx?lanmuid=63&sublanmuid=547">更多新闻</a></div>
-
-                    </div>
-                    <div class="module_footer"><span class="l"></span><span class="r"></span></div>
-                </div>
-            </div>
-
 
 
         </div>
@@ -258,4 +197,5 @@
         <div class="wz_db_cc">
         </div>
     </div>
-</div></div><div align=center style='padding:5px'>Powered by <a href='http://www.baidu.com'><b>PageAdmin CMS</b></a></div></div></body><script type="text/javascript">TongJi(1)</script></html>
+</div>
+</div></div></body></html>

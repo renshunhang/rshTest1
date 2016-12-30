@@ -1,0 +1,43 @@
+/*! responsive-nav.js 1.0.39 by @viljamis */
+
+.nav-collapse ul {
+  margin: 0;
+  padding: 0;
+  width:auto;
+  list-style: none;
+}
+
+.js .nav-collapse {
+  position: absolute;
+  clip:rect(0 0 0 0);
+  max-height: 0;
+  display: block;
+  zoom:1;
+}
+
+.nav-collapse.opened {
+  max-height: 9999px;
+}
+
+.nav-toggle {
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+}
+
+@media screen and (min-width:1000px) {
+  .js .nav-collapse {
+    position: relative;
+    clip:inherit;
+  }
+  .js .nav-collapse.closed {
+    max-height: none;
+  }
+  .nav-toggle {
+    display: none;
+  }
+}
