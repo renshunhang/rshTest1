@@ -3,8 +3,9 @@ import com.springapp.mvc.service.AOPtest.GreetingImpl;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
-import java.util.concurrent.ExecutorService;
-import java.util.concurrent.Executors;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.concurrent.*;
 
 /**
  * Created by renshunhang on 2016/8/31.
@@ -28,10 +29,33 @@ public class Test {
 
 
     public static void main(String[] args) throws InterruptedException {
-        final Test test = new Test();
-        test.set();
-        System.out.println(test.getLong());
-        System.out.println(test.getString());
+        final ExecutorService executorService = Executors.newCachedThreadPool();
+        List<Future> list = new ArrayList<Future>();
+
+        for (int i =0;i<10;i++) {
+            Future future = executorService.submit(new TaskWithResult(i));
+            list.add(future);
+        }
+
+        for (Future future:list){
+            try {
+                future.get();
+                System.out.println("result=="+future.get());
+            } catch (ExecutionException e) {
+                e.printStackTrace();
+                System.out.println("error");
+            }
+        }
+
+
+
+
+
+
+//        final Test test = new Test();
+//        test.set();
+//        System.out.println(test.getLong());
+//        System.out.println(test.getString());
 
 //        int num=0;
 //        while (true){
@@ -50,21 +74,21 @@ public class Test {
 
 
         //线程池
-        ExecutorService fixedThreadPool = Executors.newFixedThreadPool(3);
-        for (int i=0;i<10;i++){
-            final int index=i;
-            fixedThreadPool.execute(new Runnable() {
-                @Override
-                public void run() {
-                    try {
-                        System.out.println(index);
-                        Thread.sleep(2000);
-                    }catch (Exception e){
-                        e.printStackTrace();
-                    }
-                }
-            });
-        }
+//        ExecutorService fixedThreadPool = Executors.newFixedThreadPool(3);
+//        for (int i=0;i<10;i++){
+//            final int index=i;
+//            fixedThreadPool.execute(new Runnable() {
+//                @Override
+//                public void run() {
+//                    try {
+//                        System.out.println(index);
+//                        Thread.sleep(2000);
+//                    }catch (Exception e){
+//                        e.printStackTrace();
+//                    }
+//                }
+//            });
+//        }
 
 
 
@@ -73,5 +97,19 @@ public class Test {
 //        Greeting greeting1 = (Greeting) applicationContext.getBean("greetProxy");
 //        greeting1.sayHello("shunhang");
 
+    }
+
+    static class TaskWithResult implements Callable<Integer>{
+        private int i;
+
+        public TaskWithResult(int i) {
+            this.i = i;
+        }
+
+        @Override
+        public Integer call() throws Exception {
+            System.out.println("handle:" + i);
+            return i;
+        }
     }
 }

@@ -1,5 +1,6 @@
 package com.springapp.mvc.domain;
 
+import com.sun.istack.internal.NotNull;
 import org.springframework.format.annotation.DateTimeFormat;
 
 import java.io.Serializable;
@@ -10,6 +11,7 @@ import java.util.Date;
  */
 public class TestDomain implements Serializable {
     private Long id;
+    @NotNull()
     private String custNo;
     private String jdCustNo;
     private Integer isFrozed;

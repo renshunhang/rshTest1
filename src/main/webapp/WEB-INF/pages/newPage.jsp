@@ -17,6 +17,8 @@
     <link rel="stylesheet" href="/resources/e/css/responsive-nav.css" type="text/css" rel="stylesheet" />
     <link rel="stylesheet" href="/resources/e/css/iconfont/iconfont.css" type="text/css" rel="stylesheet" />
     <script src="/resources/e/js/xgcj/wow.min.js" type="text/javascript"></script>
+    <script src="../resources/jquery/jquery.min.js"></script>
+    <script src="../resources/jquery/qrcode.js"></script>
 </head>
 <body>
 <div class="page_style lanmupage page_l61">
@@ -189,8 +191,10 @@
                 <span class="s1">联系</span> <span>微博：五分奇</span> <span>电话：15100102203</span> <span>传真：000-12345678</span> <span>邮箱：xxxxxx168@126test.com</span> <span>地址：青海省西宁市</span>
             </li>
             <li class="l3">
-                <span><img src="/resources/e/images/diy/ewm.jpg" /></span> <span>关注官方微信</span>
+                <input hidden="hidden" id="text" type="text" value="http://loan.jd.com/scf/company/collect" style="width:80%">
+                <div id="qrcode" style="width:100px; height:100px; margin-top:15px;" title="http://www.downyi.com/"><canvas width="100" height="100" style="display: none;"></canvas></div>
             </li>
+            <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;关注官方微信</span>
         </ul>
     </div>
     <div class="wz_db_com2">
@@ -198,4 +202,38 @@
         </div>
     </div>
 </div>
-</div></div></body></html>
+</div></div>
+
+<script type="text/javascript">
+    var qrcode = new QRCode(document.getElementById("qrcode"),{
+        width : 100,
+        height : 100
+    });
+
+    function makeCode () {
+        var elText = document.getElementById("text");
+
+        if (!elText.value) {
+            alert("Input a text");
+            elText.focus();
+            return;
+        }
+        qrcode.makeCode(elText.value);
+    }
+
+    makeCode();
+
+    $("#text").
+    on("blur", function () {
+        makeCode();
+    }).
+    on("keydown", function (e) {
+        if (e.keyCode == 13) {
+            makeCode();
+        }
+    });
+</script>
+
+</body></html>
+
+

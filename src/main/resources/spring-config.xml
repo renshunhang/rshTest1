@@ -2,7 +2,8 @@
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xmlns:context="http://www.springframework.org/schema/context"
-       xmlns:mvc="http://www.springframework.org/schema/mvc" xmlns:task="http://www.springframework.org/schema/cache"
+       xmlns:mvc="http://www.springframework.org/schema/mvc"
+       xmlns:cache="http://www.springframework.org/schema/c"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc.xsd http://www.springframework.org/schema/cache http://www.springframework.org/schema/cache/spring-cache.xsd">
 
 
@@ -14,6 +15,18 @@
 
 
        <context:component-scan base-package="com.springapp.mvc"/>
+
+
+       <!--&lt;!&ndash; 启用缓存注解功能(请将其配置在Spring主配置文件中) &ndash;&gt;-->
+       <!--<cache:annotation-driven cache-manager="cacheManager"/>-->
+       <!--&lt;!&ndash; Spring提供的基于的Ehcache实现的缓存管理器 &ndash;&gt;-->
+       <!--<bean id="cacheManagerFactory" class="org.springframework.cache.ehcache.EhCacheManagerFactoryBean">-->
+              <!--<property name="configLocation" value="classpath:/spring/ehcache.xml"/>-->
+       <!--</bean>-->
+       <!--<bean id="cacheManager" class="org.springframework.cache.ehcache.EhCacheCacheManager">-->
+              <!--<property name="cacheManager" ref="cacheManagerFactory"/>-->
+       <!--</bean>-->
+
 
        <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
               <property name="prefix" value="/WEB-INF/pages/"/>
@@ -56,4 +69,5 @@
 
        <import resource="classpath:spring/spring-servlet.xml"/>
        <import resource="classpath:spring/spring-db.xml"/>
+       <!--<import resource="classpath:spring/ehcache.xml"/>-->
 </beans>

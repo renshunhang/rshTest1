@@ -2,13 +2,9 @@ package com.springapp.mvc.service.BatchTest;
 
 import com.springapp.mvc.domain.User;
 import org.springframework.batch.item.ItemProcessor;
-import sun.plugin2.message.Serializer;
 
-import java.io.IOException;
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
 /**
  * Created by renshunhang on 2016/12/29.

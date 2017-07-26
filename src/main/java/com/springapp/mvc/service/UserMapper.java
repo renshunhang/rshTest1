@@ -17,4 +17,7 @@ public class UserMapper implements FieldSetMapper<User> {
         user.setAge(fieldSet.readInt(1));
         return user;
     }
+
+
+
 }

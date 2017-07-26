@@ -35,5 +35,13 @@
 		<url-pattern>/</url-pattern>
 	</servlet-mapping>
 
-	
+
+
+	<!-- 定义LOG4J监听器 -->
+	<listener>
+		<listener-class>
+			org.springframework.web.util.Log4jConfigListener
+		</listener-class>
+	</listener>
+
 </web-app>

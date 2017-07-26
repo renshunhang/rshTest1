@@ -23,4 +23,27 @@
 
        <bean id="greetingImpl" class="com.springapp.mvc.service.AOPtest.GreetingImpl"/>
        <bean id="greetingAroundAdvice" class="com.springapp.mvc.service.AOPtest.GreetingAroundAdvice"/>
+
+       <!--调度工厂-->
+       <bean id="schedule" class="org.springframework.scheduling.quartz.SchedulerFactoryBean">
+              <property name="triggers">
+                     <list>
+                            <ref bean="morningTaskTrigger"/>
+                     </list>
+              </property>
+       </bean>
+       <!--调度触发器-->
+       <bean id="morningTaskTrigger" class="org.springframework.scheduling.quartz.CronTriggerBean">
+              <property name="jobDetail" ref="morningTaskJob"/>
+              <property name="cronExpression" value="0 0/1 * * * ?"/>
+       </bean>
+
+       <bean id="morningWorker" class="com.springapp.mvc.service.worker.MorningWorker">
+              <property name="param" value="RSH"/>
+       </bean>
+       <bean id="morningTaskJob" class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">
+              <property name="targetObject" ref="morningWorker"/>
+              <property name="targetMethod" value="morningTask"/>
+              <property name="concurrent" value="false"/>
+       </bean>
 </beans>
