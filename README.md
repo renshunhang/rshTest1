@@ -1,2 +1,2 @@
 # rshTest1
-laowu  
+mvc model
